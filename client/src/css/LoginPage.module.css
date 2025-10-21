@@ -1,0 +1,90 @@
+/* Layout */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f5f6fa;
+  font-family: "Inter", "Poppins", sans-serif;
+}
+
+/* White card */
+.card {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+
+/* Title */
+.title {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.8rem;
+}
+
+/* Input fields */
+.input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  margin-bottom: 1.1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fafafa;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #4a69ff;
+  box-shadow: 0 0 0 3px rgba(74, 105, 255, 0.15);
+  background-color: #fff;
+}
+
+/* Primary button */
+.button {
+  width: 100%;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #4f9cff, #4a69ff);
+  background-size: 200%;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(160deg, #4f9cff, #4a69ff);
+}
+
+
+/* Secondary (Register) button */
+.secondaryBtn {
+  background: #f0f3ff;
+  color: #4a69ff;
+  border: 1px solid #cfd8ff;
+}
+
+.secondaryBtn:hover {
+  background: #e4e9ff;
+}
+
+/* Error message */
+.error {
+  color: #e63946;
+  background: #fde8e8;
+  border-radius: 6px;
+  padding: 0.5rem;
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+}
