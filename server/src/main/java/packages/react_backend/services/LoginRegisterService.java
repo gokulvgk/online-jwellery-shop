@@ -11,16 +11,24 @@ import packages.react_backend.DAOmodels.UsersEntity;
 public class LoginRegisterService 
 {
     @Autowired
-    private UsersRepo Repo;
+    private UsersRepo repo;
     public boolean validateUserCredentials(UserCredentials credentials) 
     {
-        return Repo.existsByUsername(credentials.getUsername());
+        return repo.existsByUsername(credentials.getUsername());
     }
 
-    public boolean registerUser(UserCredentials credentials) 
+    public boolean registerUser(UserCredentials credentials)
     {
-        Repo.save(new UsersEntity(credentials));
+        credentials.setPassword(EncoderService.encode(credentials.getPassword()));
+        repo.save(new UsersEntity(credentials));
         return true;
+    }
+
+    public boolean authenticateUser(UserCredentials credentials) 
+    {
+        UsersEntity user = repo.findByUsername(credentials.getUsername());
+        if (user == null) return false;
+        return EncoderService.matches(credentials.getPassword(), user.getPassword());
     }
 
 }

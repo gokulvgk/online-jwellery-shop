@@ -12,5 +12,5 @@
 
 ## 🔐 Backend
 
-- **Implement Password Encoding**  
-  Use `BCryptPasswordEncoder` in Spring Boot to securely hash and verify user passwords.
+- ~~**Implement Password Encoding**  
+  Use `BCryptPasswordEncoder` in Spring Boot to securely hash and verify user passwords.~~

@@ -29,7 +29,7 @@ public class LoginRegisterController {
     public ResponseEntity<Response> login (@RequestBody UserCredentials credentials) 
     {
 
-        if (loginRegisterService.validateUserCredentials(credentials) == false) 
+        if (loginRegisterService.authenticateUser(credentials) == false) 
         {
             response.setMessage("invalid credentials");
             return new ResponseEntity<>(response, HttpStatus.UNAUTHORIZED);

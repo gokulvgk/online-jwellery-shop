@@ -22,14 +22,16 @@ export default function LoginPage() {
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ username, password }),
             });
-
-            if (!res.status == 302) {
+            console.log(res.status);
+            if (res.status !== 302) {
                 const data = await res.json().catch(() => ({}));
                 setError(data.message || "Login failed.");
+                console.log("Login failed:", data);
                 return;
             }
 
             const data = await res.json().catch(() => ({}));
+            console.log("Login successful:", data.message);
             sessionStorage.setItem("loggedInUser", username); 
             window.location.href = "/"; 
         } catch (err) {

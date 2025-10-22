@@ -9,4 +9,5 @@ import packages.react_backend.DAOmodels.UsersEntity;
 public interface UsersRepo extends JpaRepository<UsersEntity, String>
 {
     boolean existsByUsername(String username);
+    UsersEntity findByUsername(String username);
 }
