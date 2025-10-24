@@ -10,7 +10,7 @@
     padding: 12px;
     border: 1px solid rgb(235, 235, 229);
     border-radius :12px; 
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.12);
 
 }
 .details{
@@ -23,7 +23,7 @@
 }
 .cartButton{
     padding: 10px 20px;
-    background-color: #4CAF50; /* Green */
+    background-color: #f00; 
     color: white;
     border: none;
     border-radius: 5px;
@@ -31,11 +31,20 @@
     font-size: 1rem;
 }
 .cartButton:hover{
-    background-color: #3a9a3f; /* Darker green */
+    background-color: #c40000; 
 }
 .cartButton:active{
     transform: scale(0.95);
 }
+
+.cartButton:disabled {
+  background-color: #309d34; 
+  cursor: not-allowed;     
+  transform: none;        
+  box-shadow: none;
+  /* pointer-events: none;    */
+}
+
 p{
     font-size: 1.3rem;
     font-weight: bold;
@@ -55,5 +64,5 @@ p{
 }
 .symbols:hover{
     cursor: pointer;
-    color: #007BFF; /* Change color on hover */
+    color: #007BFF; 
 }

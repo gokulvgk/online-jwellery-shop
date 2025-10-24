@@ -14,7 +14,9 @@ function quantityReducer(quantity, action) {
             return quantity + 1;
         case 'decrement':
             return quantity > 0 ? quantity - 1 : 0;
-        default:
+        case 'reset':
+            return 0;
+            default:
             return quantity;
     }
 }
@@ -30,7 +32,7 @@ const itemMap = {
 };
 
 export default function Item({ name }) {
-    const { setCartItems } = useContext(cartContext);
+    const { setCartItems, setCartCount} = useContext(cartContext);
     const [quantity, dispatch] = useReducer(quantityReducer, 0);
     const price = 
     {
@@ -44,16 +46,17 @@ export default function Item({ name }) {
 
 
     function addToCart() {  
+        if (quantity === 0) alert("Quantity cannot be zero");
         setCartItems(prev => {
             if (prev[name]) {
                 const updatedQuantity = prev[name].quantity + quantity;
                 const newState = { ...prev, [name]: { price, "quantity": updatedQuantity } };
-                console.log(newState);
                 return newState;
             }
             const newState = { ...prev, [name]: { price, quantity} };
-            console.log(newState);
             return newState;});
+        setCartCount(count => count + quantity);
+        dispatch({ type: "reset" });
     }
 
     return (
@@ -77,7 +80,7 @@ export default function Item({ name }) {
                         -
                     </button>
                 </div>
-                <button className={styles.cartButton} onClick = {addToCart}>Add to cart</button>
+                <button className={styles.cartButton} onClick = {addToCart} disabled={quantity === 0}>Add to cart</button>
             </div>
         </div>
     );

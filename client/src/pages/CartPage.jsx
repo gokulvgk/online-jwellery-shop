@@ -13,7 +13,8 @@ export default function CartPage() {
         <div>
             <Header title="Your Cart" />
             <CartList/>
-            {cartItemsCount!==0 && <BuyButton setModal = {setModal}/>}
+            {cartItemsCount!==0 ? <BuyButton setModal = {setModal}/> : 
+            <p style={{textAlign:'center',position:'fixed',top:'45%',left:'35%',fontSize: '3rem'}}>Your cart is empty ☹️ <br /> Buy something</p>}
             {modal && <ClosureModal setModal = {setModal}/>}
         </div>
     );

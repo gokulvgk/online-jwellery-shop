@@ -17,11 +17,12 @@ const p ={
     textAlign: 'center',
 }
 export default function ClosureModal({setModal}) {
-    const { setCartItems } = useContext(cartContext);
+    const { setCartItems, setCartCount } = useContext(cartContext);
     const navigate = useNavigate();
     function modalClose() {
         setCartItems({}); 
         setModal(false);
+        setCartCount(0);
         navigate('/'); 
     }
 

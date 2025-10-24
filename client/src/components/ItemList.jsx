@@ -4,13 +4,13 @@ export default function ItemList() {
     const div ={
         maxWidth: "100vw",
         maxHeight: "90vh",
-        margin : "20px 0px 0px 0px",
         display: "flex",
         flexDirection: "column",   
         justifyContent: "center",
         alignItems: "center",
         gap: "30px",
         flexWrap: "wrap",
+        margin: "0px 40px",
     }
     return (
         <div style = {div}>

@@ -10,10 +10,12 @@ export default function Header({title}) {
         alignItems: "center",
         backgroundColor: "white",
         borderRadius: "12px",
-        padding: "10px",
+        padding: "15px",
         boxShadow: "4px 4px 10px rgba(0, 0, 0, 0.1)",
         border: "1px solid #ddceceff",
-        maxWidth: "100%",
+        maxWidth: "60%",
+        margin: "0px auto",
+        marginTop: "20px",
 }
     
     return (

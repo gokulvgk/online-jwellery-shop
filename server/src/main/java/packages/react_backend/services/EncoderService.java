@@ -13,6 +13,5 @@ public class EncoderService {
         return encoder.matches(rawPassword, encodedPassword);
     }
 
-
 }
 
