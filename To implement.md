@@ -5,8 +5,11 @@
 - ~~**Add Cart Logo**  
   Add a cart icon to the navigation bar or header for quick cart access.~~
 
-- **Add Quantity Adjust Buttons on Cart Page**  
-  Include `+` and `−` buttons beside each item in the cart to update quantity dynamically.
+- ~~**Add Quantity Adjust Buttons on Cart Page**  
+  Include `+` and `−` buttons beside each item in the cart to update quantity dynamically.~~
+
+- **Show Bill Amount on Cart Page**
+  Add a component to show total bill amount on cart page
 
 ---
 

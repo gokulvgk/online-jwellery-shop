@@ -1,5 +1,6 @@
 import CartList from '../components/CartList';
 import Header from '../components/Header';
+import CartHeader from '../components/CartHeader';
 import BuyButton from '../components/buyButton';
 import { useState } from 'react';
 import ClosureModal from '../components/ClosureModal';
@@ -12,6 +13,7 @@ export default function CartPage() {
     return (
         <div>
             <Header title="Your Cart" />
+            {cartItemsCount!==0 && <CartHeader/>}
             <CartList/>
             {cartItemsCount!==0 ? <BuyButton setModal = {setModal}/> : 
             <p style={{textAlign:'center',position:'fixed',top:'45%',left:'35%',fontSize: '3rem'}}>Your cart is empty ☹️ <br /> Buy something</p>}

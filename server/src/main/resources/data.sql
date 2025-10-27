@@ -1,0 +1,1 @@
+TRUNCATE purchase_entity;

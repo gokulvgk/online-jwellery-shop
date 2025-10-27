@@ -1,12 +1,13 @@
 .mainContainer{
     display: grid;
-    grid-template-columns: 1.5fr 1.5fr 1.5fr 2fr 0.5fr; /* Name column is double */
+    grid-template-columns: 1.5fr 1.5fr 1.5fr 2fr 2.4fr 0.5fr; /* Name column is double */
     padding: 10px 20px;
-    border: 1px solid #ede9e9;
+    /* border: 1px solid #ede9e9; */
     border-radius: 7px;
     width: 50vw;
     margin: 20px auto;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
 }
 .btn{
     background-color: #f02e2e;

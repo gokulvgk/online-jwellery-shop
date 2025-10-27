@@ -17,19 +17,23 @@ const p ={
     textAlign: 'center',
 }
 export default function ClosureModal({setModal}) {
-    const { setCartItems, setCartCount } = useContext(cartContext);
+    const { setCartItems, cartItems } = useContext(cartContext);
     const navigate = useNavigate();
     function modalClose() {
         setCartItems({}); 
         setModal(false);
-        setCartCount(0);
         navigate('/'); 
+    }
+
+    let billAmount = 0;
+    for (const item of Object.values(cartItems)) {
+        billAmount += item.price * item.quantity;
     }
 
     return (
         <Modal>
             <button style = {btn} onClick={modalClose} >X</button>
-            <p style = {p}>Thank you for your purchase</p>
+            <p style = {p}>Thank you for your purchase of Rs.{billAmount} </p>
         </Modal>
     );
 }

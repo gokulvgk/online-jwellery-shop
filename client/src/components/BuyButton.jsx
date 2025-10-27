@@ -4,7 +4,7 @@ export default function BuyButton({setModal}) {
     const {cartItems, setCartItems} = useContext(cartContext);
     const handleClick = () => {
         setModal(prev => !prev);
-        const username = localStorage.getItem("loggedInUser");
+        const username = sessionStorage.getItem("loggedInUser");
         const purchase = Object.entries(cartItems).map(([product , details]) => {
             console.log({username, product, ...details})
             return {username, product, ...details}});

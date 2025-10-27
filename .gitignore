@@ -30,5 +30,6 @@ server/mvnw.cmd
 
 # Environment variables / config
 server/src/main/resources/application-*.properties
+.env
 
 

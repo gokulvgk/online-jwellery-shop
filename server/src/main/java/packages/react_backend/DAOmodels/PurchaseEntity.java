@@ -17,11 +17,13 @@ public class PurchaseEntity
     private String username;
     private String product;
     private Integer price;
-    private Integer quantity;
+    private Integer quantity; 
+    private Integer totalPrice;
     public PurchaseEntity(Purchase purchase) {
         this.username = purchase.getUsername();
         this.product = purchase.getProduct();
         this.price = purchase.getPrice();
         this.quantity = purchase.getQuantity();
+        this.totalPrice = this.price * this.quantity;
     }
 }
