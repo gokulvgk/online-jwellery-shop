@@ -37,9 +37,6 @@ export default function RegisterPage() {
                 setError(data.message || "Registration failed.");
                 return;
             }
-
-            const data = await res.json().catch(() => ({}));
-            console.log("Registration successful:", data.message);
             setSuccess("Account created successfully! Redirecting to login...");
             
             setTimeout(() => navigate("/login", { replace: true }), 1500);

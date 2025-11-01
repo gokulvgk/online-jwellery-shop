@@ -10,10 +10,16 @@
     padding: 12px;
     border: 1px solid white;
     border-radius :12px; 
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.12);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15);
     background-color: white;
 
 }
+
+.mainContainer:hover{
+    transform: scale(1.02);
+    transition: ease-in-out 0.15s;
+}
+
 .details{
     display:flex;
     flex-direction: column;

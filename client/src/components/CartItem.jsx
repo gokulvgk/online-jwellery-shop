@@ -6,7 +6,6 @@ import AdjustQuantityButtons from './AdjustQuantityButtons';
 export default function CartItem({name}) {
     const {cartItems, deleteCartItem} = useContext(cartContext);
     const item = cartItems[name];
-    console.log(item.price);
     return (
         <div className={styles.mainContainer}>
             <div className = {styles.detail}>{name}</div>

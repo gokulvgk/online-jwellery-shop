@@ -5,12 +5,12 @@ import { useContext } from 'react';
 export default function CartHeader() {
     const { setCartItems } = useContext(cartContext);   
     return (
-            <div  className={styles.mainContainer}>
-            <div className = {styles.detail}><b>Item</b></div>
-            <div className = {styles.detail}><b>Price</b></div>
-            <div className = {styles.detail}><b>Quantity</b></div>
-            <div className = {styles.detail}><b>Total price</b></div>
-            <div className = {styles.detail}><b>Adjust quantity</b></div>
+            <div  className={styles.cartHeader}>
+            <h3 className = {styles.detail}>Item</h3>
+            <h3 className = {styles.detail}>Price</h3>
+            <h3 className = {styles.detail}>Quantity</h3>
+            <h3 className = {styles.detail}>Total price</h3>
+            <h3 className = {styles.detail}>Adjust quantity</h3>
             <button className={styles.btn} onClick={()=>{setCartItems({})}}>Drop All</button>
         </div>
     );

@@ -8,8 +8,8 @@
 - ~~**Add Quantity Adjust Buttons on Cart Page**  
   Include `+` and `−` buttons beside each item in the cart to update quantity dynamically.~~
 
-- **Show Bill Amount on Cart Page**
-  Add a component to show total bill amount on cart page
+- ~~**Show Bill Amount on Cart Page**
+  Add a component to show total bill amount on cart page~~
 
 ---
 

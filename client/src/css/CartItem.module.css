@@ -1,13 +1,28 @@
 .mainContainer{
     display: grid;
-    grid-template-columns: 1.5fr 1.5fr 1.5fr 2fr 2.4fr 0.5fr; /* Name column is double */
+    grid-template-columns: 1.5fr 1.5fr 1.5fr 2fr 2.4fr 0.5fr; 
     padding: 10px 20px;
-    /* border: 1px solid #ede9e9; */
     border-radius: 7px;
-    width: 50vw;
+    width: 48vw;
     margin: 20px auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     background-color: white;
+    transition: ease-in-out 0.1s;
+}
+
+.cartHeader{
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 1.5fr 2fr 2.4fr 0.5fr; 
+    padding: 10px 20px;
+    border-radius: 7px;
+    width: 48vw;
+    margin: 20px auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+.mainContainer:hover{
+    transform: scale(1.01);
 }
 .btn{
     background-color: #f02e2e;

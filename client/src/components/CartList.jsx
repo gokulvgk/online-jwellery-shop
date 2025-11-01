@@ -5,7 +5,7 @@ export default function CartList() {
     const {cartItems} = useContext(cartContext);
     const itemNames = Object.keys(cartItems);
     return (
-        <div>
+        <div style = {{marginBottom: '80px', backgroundColor: 'rgb(250, 250, 250)'}}>
             {itemNames.map(item =><CartItem  name = {item} key = {item} />)}
         </div>
     );

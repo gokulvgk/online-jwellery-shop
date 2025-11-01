@@ -24,7 +24,6 @@ export default function CartProvider({children}) {
     function adjustItemQuantity(name, action) {       
         setCartItems(prev => {
             const item = prev[name];
-            console.log(item);
             let updatedQuantity = item.quantity;
             if (action === 'increment') {
                 updatedQuantity += 1;
